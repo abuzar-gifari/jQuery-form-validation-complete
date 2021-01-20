@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery form validation</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+
+
+		<style>
+			*{
+				box-sizing:border-box;
+				letter-spacing:0.1rem;
+				font-family: 'Roboto Slab', serif;
+
+			}
+			.form_portion{
+				width: 450px;
+				height:500px;
+				background-color:#D8B6AF;
+				position:absolute;
+				top:50%;
+				left:50%;
+				transform:translate(-50%, -50%);
+				padding:10px;
+				border-radius:5px;
+				padding:20px;
+				box-shadow: 5px 5px #888888;
+			}
+			#f_name,#l_name,#email{
+				width:300px;
+				padding:10px;
+				margin-bottom:10px;
+			}
+			#submit{
+				margin-top:30px;
+				width:200px;
+				padding:10px;
+				text-align:center;
+			}
+			.error_icon{
+				background-image:url('error.png');
+				background-repeat:no-repeat;
+				background-position:100% 45%;
+			}
+			
+			.red{
+				border:1px solid #f00;
+			}
+			select{
+				padding:6px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="form_portion">
+			<form>
+				Your First Name: <br>
+				<input type="text" id="f_name"> <span id="e_fname"></span>	<br>
+				Your Last Name: <br> 
+				<input type="text" id="l_name"> <span id="e_lname"></span>	<br>
+				Your Email No: <br> 
+				<input type="email" id="email"> <span id="e_email"></span>	<br>
+				Your Gender: <br> <br>
+				
+				Male: <input type="radio" name="gender" id="male"> 
+				Female: <input type="radio" name="gender" id="female"> <span id="e_gender"></span>
+				<br><br>
+				Select Year: <select id="year"></select><span id="e_year"></span>
+				<br><br>Select Day: <select id="day"></select><span id="e_day"></span>
+				<br>
+				<input type="button" id="submit" value="submit">
+			</form>
+		</div>
+		
+		<script src="jquery.min.js"></script>
+		<script src="custom.js"></script>
+	</body>
+</html>
